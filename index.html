@@ -25,93 +25,69 @@
     <link href='http://fonts.googleapis.com/css?family=Raleway:300,500' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <header>
-      <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <h1><a href="/" class="navbar-brand">dolater.io</a></h1>
-          </div>
-          <div class="collapse navbar-collapse navbar-right">
-            <ul class="nav navbar-nav">
-              <li><a href="https://github.com/dolaterio/dolaterio">Github</a></li>
-              <li><a href="https://github.com/dolaterio/dolaterio/tree/master/docs">Documentation</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
-
-    <div id="landing-header">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div><img src="/images/icon.png" width="150" height="150" /></div>
-            <h2>Simple and hassle free background tasks</h2>
-            <p>dolater.io is a service to run background jobs in Docker.</p>
-          </div>
-        </div>
+    <div id="intro">
+      <div class="wrapper">
+        <div><img src="/images/icon.png" width="150" height="150" /></div>
+        <h2>Simple and hassle free background tasks</h2>
+        <p><a href="/" class="logo">dolater.io</a> is a service to run background jobs in Docker.</p>
+        <ul>
+          <li><a href="https://github.com/dolaterio/dolaterio">Github</a></li>
+          <li><a href="https://github.com/dolaterio/dolaterio/tree/master/docs">Docs</a></li>
+        </ul>
       </div>
     </div>
 
-    <div id="landing-steps">
-      <div class="container">
-        <div class="row">
-          <div class="col col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class='step step1'>
-              <div class='desc'>
-                <h3>Write the code for your worker</h3>
-                <p>Dolater.io runs docker images, so you can use any language! Follow our <a href="https://github.com/dolaterio/dolaterio/tree/master/docs">documentation</a> on how to write your workers.</p>
-              </div>
-            </div>
-          </div>
+    <div id="steps">
+      <div class="wrapper">
+        <div class='step step1'>
+          <h3>1. Write the code for your worker</h3>
+          <p>Dolater.io runs docker images, so you can use any language! Follow our <a href="https://github.com/dolaterio/dolaterio/tree/master/docs">documentation</a> on how to write your workers.</p>
         </div>
-        <div class="row">
-          <div class="col col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class='step step2'>
-              <div class='desc'>
-                <h3>Create a Docker image for your worker</h3>
-                <p>Make your worker run in Docker. You can see <a href="https://github.com/dolaterio/dolaterio/tree/master/docs">our docs</a> to get an idea of how to do it.</p>
-              </div>
-            </div>
-          </div>
+        <div class='step step2'>
+          <h3>2. Create a Docker image for your worker</h3>
+          <p>Make your worker run in Docker. You can see <a href="https://github.com/dolaterio/dolaterio/tree/master/docs">our docs</a> to get an idea of how to do it.</p>
         </div>
-        <div class="row">
-          <div class="col col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class='step step3'>
-              <div class='desc'>
-                <h3>Create a worker with that image</h3>
-                <p>Use the API to create a worker using your worker docker images. You'll need to publish it as a public image in <a href="http://hub.docker.com">hub.docker.com</a> and use its name when you create your worker.</p>
-              </div>
-            </div>
-          </div>
+        <div class='step step3'>
+          <h3>3. Create a worker with that image</h3>
+          <p>Use the API to create a worker using your worker docker images. You'll need to publish it as a public image in <a href="http://hub.docker.com">hub.docker.com</a> and use its name when you create your worker.</p>
         </div>
-        <div class="row">
-          <div class="col col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class='step step4'>
-              <div class='desc'>
-                <h3>Queue jobs to your worker</h3>
-                <p>Use our API to submit jobs to your worker. Dolater.io runners will process the queue as quick as posible!</p>
-              </div>
-            </div>
-          </div>
+        <div class='step step4'>
+          <h3>4. Queue jobs to your worker</h3>
+          <p>Use our API to submit jobs to your worker. Dolater.io runners will process the queue as quick as posible!</p>
         </div>
-        <div class="row">
-          <div class="col col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2">
-            <div class='step step5'>
-              <div class='desc'>
-                <h3>Get the output of your jobs</h3>
-                <p>When a job is completed, you can get its output using the API.</p>
-              </div>
-            </div>
-          </div>
+        <div class='step step5'>
+          <h3>5. Get the output of your jobs</h3>
+          <p>When a job is completed, you can get its output using the API.</p>
         </div>
+      </div>
+    </div>
+    <div id="demo">
+      <div class="wrapper">
+        <h3>Demo time!</h3>
+        <p>
+          We have a server running the API and some workers too. It's at <code>demo.dolater.io</code>. Feel free to use it to play with our API. For example, you can run the <a href="https://github.com/dolaterio/parrot">parrot</a> worker, a really silly worker that sends to the <code>stdout</code> whatever is sent to the <code>stdin</code>.
+          But first, create your own worker running the following:
+          <pre><code>curl http://demo.dolater.io/v1/workers \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d '{
+    "docker_image": "dolaterio/parrot"
+  }'</code></pre>
+
+          Once you have your worker created, take its <code>id</code> and queue a task on it: 
+          <pre><code>curl "http://demo.dolater.io/v1/jobs" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d '{
+    "worker_id": WORKER_ID,
+    "stdin": "Hello world!"
+  }'</code></pre>
+
+          This might take a bit to finish. Using the job <code>id</code> you can get the status of the job running:
+          <pre><code>curl "http://demo.dolater.io/v1/jobs/JOB_ID"</code></pre>
+
+          Your job will eventually finish and you will se that the <code>stdin</code> and <code>stdout</code> are the same, since this is what that image is doing.
+        </p>
       </div>
     </div>
   </body>
